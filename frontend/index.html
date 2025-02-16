@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEPEDOGE TOKEN</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Include Chart.js from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header with Navigation Menu -->
+  <header>
+    <nav>
+      <ul>
+        <!-- Ensure the slides line up with the intended indexes -->
+        <li><a href="#" onclick="goToSlide(0)">Home</a></li>
+        <li><a href="#" onclick="goToSlide(1)">About</a></li>
+        <li><a href="#" onclick="goToSlide(4)">Roadmap</a></li>
+        <li><a href="#" onclick="goToSlide(3)">Tokenomics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content with Carousel -->
+  <main>
+    <section class="carousel-container">
+      <div class="carousel">
+        
+        <!-- Slide 0: Welcome -->
+        <div class="carousel-item active">
+          <div class="slide-content">
+            <h1 class="neon-text">PEPEDOGE TOKEN</h1>
+            <img
+              src="PepeDogLogo.webp"
+              class="logo"
+              alt="PepeDoge Logo"
+            />
+            <p class="lead">
+              An innovative meme coin combining the legendary Pepe and Doge memes into one token on the Ethereum blockchain.
+            </p>
+            <p>
+              <b>Token Contract:</b> <span id="tokenAddress">0xBDB5...77126</span>
+            </p>
+            <button class="btn neon-btn" onclick="copyToClipboard()">Copy Address</button>
+            <p>
+              <b>Explorer:</b>
+              <a
+                href="https://etherscan.io/token/0xBDB5f01b2673790aEc2E077470BFFcc371a77126"
+                target="_blank"
+                class="link rainbow"
+              >View on Etherscan</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 1: About PepeDoge -->
+        <div class="carousel-item">
+          <div class="slide-content">
+            <h2 class="neon-text">About PepeDoge</h2>
+            <img
+              src="PepeDogLogo.webp"
+              class="logo"
+              alt="PepeDoge Logo"
+            />
+            <p>
+              PepeDoge (PED) is an innovative meme coin that combines the legendary Pepe and Doge memes
+              into one token on the Ethereum blockchain. The project aims to build an active community,
+              develop a DeFi ecosystem, and launch various initiatives such as NFT collections,
+              DAO governance, and exclusive Airdrop programs.
+            </p>
+            <p>
+              PepeDoge is more than just a meme—it’s a community-driven movement that believes in
+              the power of decentralization and crypto culture. We are dedicated to creating a fun,
+              secure, and rewarding ecosystem for every participant.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2: Project Goals -->
+        <div class="carousel-item">
+          <div class="slide-content">
+            <h2 class="neon-text">Project Goals</h2>
+            <ul class="list-group">
+              <li>📌 <b>Community:</b> Build an engaged and active meme culture.</li>
+              <li>📌 <b>Long-term Development:</b> NFT collections, DAO governance, and more.</li>
+              <li>📌 <b>Decentralization:</b> Fully open-source and community-driven.</li>
+              <li>📌 <b>Fair Launch:</b> No pre-mine, no team allocation, 100% fair distribution.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 3: Tokenomics + Token Distribution -->
+        <div class="carousel-item">
+          <div class="slide-content">
+            <h2 class="neon-text">Tokenomics</h2>
+            <p>🔹 <b>Ticker:</b> PED</p>
+            <p>🔹 <b>Network:</b> Ethereum (ERC-20)</p>
+            <p>🔹 <b>Total Supply:</b> 842,487,169 PED</p>
+
+            <h2 class="neon-text" style="margin-top: 2rem;">Token Distribution</h2>
+            <!-- Container to limit chart size -->
+            <div style="max-width: 300px; margin: 0 auto;">
+              <canvas id="tokenChart"></canvas>
+            </div>
+            <!-- Custom legend -->
+            <ul style="text-align:left; display:inline-block; margin-top:1rem;">
+              <li><span style="color: #fbc531;">■</span> 30% Uniswap Liquidity</li>
+              <li><span style="color: #e74c3c;">■</span> 10% Team</li>
+              <li><span style="color: #3498db;">■</span> 15% Marketing & Growth</li>
+              <li><span style="color: #f1c40f;">■</span> 20% CEX Reserve</li>
+              <li><span style="color: #2ecc71;">■</span> 10% Airdrop</li>
+              <li><span style="color: #9b59b6;">■</span> 15% Community Rewards</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 4: Roadmap -->
+        <div class="carousel-item">
+          <div class="slide-content">
+            <h2 class="neon-text">Roadmap – 2025</h2>
+            <p>
+              <b>📌 Q1 2025:</b> ✅ Launch website & social media, start marketing, develop app
+            </p>
+            <p>
+              <b>📌 Q2 2025:</b> Token presale, Uniswap listing, large-scale airdrop, partnerships
+            </p>
+            <p>
+              <b>📌 Q3 2025:</b> PepeDoge NFT collection, DAO governance, CEX listing
+            </p>
+            <p>
+              <b>📌 Q4 2025:</b> DeFi utilities, token burn, global marketing & expansion
+            </p>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Buttons -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with Links -->
+  <footer>
+    <ul>
+      <li><a href="Terms of Use.pdf" target="_blank">Terms of Use</a></li>
+      <li><a href="Privacy Policy.pdf" target="_blank">Privacy Policy</a></li>
+      <li><a href="Legal Disclaimer for PepeDoge (PED).pdf" target="_blank">Legal Disclaimer</a></li>
+    </ul>
+  </footer>
+
+  <!-- JavaScript for Carousel Functionality and Copy-to-Clipboard -->
+  <script>
+    // Function to copy the token address to clipboard
+    function copyToClipboard() {
+      const tokenAddress = document.getElementById('tokenAddress').innerText;
+      navigator.clipboard.writeText(tokenAddress).then(() => {
+        alert('Token address copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+
+    // Carousel functionality (auto switching turned off)
+    const slides = document.querySelectorAll('.carousel-item');
+    let currentSlide = 0;
+
+    function updateSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    document.querySelector('.next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide(currentSlide);
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide(currentSlide);
+    });
+
+    // Jump directly to a specific slide
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlide(currentSlide);
+    }
+
+    // Create the Token Distribution Chart using Chart.js
+    const ctx = document.getElementById('tokenChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: [
+          'Uniswap Liquidity',
+          'Team',
+          'Marketing & Growth',
+          'CEX Reserve',
+          'Airdrop',
+          'Community Rewards'
+        ],
+        datasets: [{
+          data: [30, 10, 15, 20, 10, 15],
+          backgroundColor: [
+            '#fbc531', // 30% Uniswap Liquidity
+            '#e74c3c', // 10% Team
+            '#3498db', // 15% Marketing & Growth
+            '#f1c40f', // 20% CEX Reserve
+            '#2ecc71', // 10% Airdrop
+            '#9b59b6'  // 15% Community Rewards
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false // We use a custom legend below the chart
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

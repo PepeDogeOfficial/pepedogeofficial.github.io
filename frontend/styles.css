@@ -1,0 +1,235 @@
+/* 
+  1) Ensure html and body occupy full height 
+  2) Box-sizing set to border-box 
+*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 
+  Use flexbox on the body to push the footer down 
+  by letting main content flex: 1 
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1e1e1e, #3b3b3b);
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Let main expand to fill leftover space, keeping footer at bottom */
+main {
+  flex: 1;
+}
+
+/* Header & Navigation */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #39ff14;
+}
+
+/* Carousel Container */
+.carousel-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Items */
+.carousel-item {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide Content */
+.slide-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Neon Text Effect */
+.neon-text {
+  font-size: 2.5rem;
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14;
+  margin-bottom: 1rem;
+}
+
+/* Logo Image */
+.logo {
+  max-width: 200px;
+  margin: 1rem 0;
+}
+
+/* Lead Paragraph */
+.lead {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Smaller "Copy Address" button with neon styling */
+.neon-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  background-color: #39ff14;
+  color: #121212;
+}
+
+.neon-btn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+/* Link Styling */
+.link {
+  color: #39ff14;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #2ecc71;
+}
+
+/* Rainbow shining effect on text */
+.rainbow {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowAnimation 3s linear infinite;
+}
+
+@keyframes rainbowAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* List Group for Project Goals */
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 500px;
+}
+
+.list-group li {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* Target only the arrow buttons (.prev, .next) so they remain large and circular */
+.carousel > .prev,
+.carousel > .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #e0e0e0;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.carousel > .prev:hover,
+.carousel > .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel > .prev {
+  left: 10px;
+}
+
+.carousel > .next {
+  right: 10px;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+footer ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #39ff14;
+}
