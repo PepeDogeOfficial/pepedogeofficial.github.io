@@ -28,6 +28,19 @@
         <li><a href="#" onclick="goToSlide(5)">Roadmap</a></li>
       </ul>
     </nav>
+    <!-- Social Icons for X and Telegram -->
+    <div class="social-links">
+      <!-- Use the local file "X_icon_2.svg.png" for the X icon -->
+      <a href="https://x.com/PepeDogeToken" target="_blank">
+        <img src="X_icon_2.svg.png" alt="X" />
+      </a>
+      <a href="https://t.me/PEPE_DOGE_VO" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+          alt="Telegram"
+        />
+      </a>
+    </div>
   </header>
 
   <!-- Main Content with Carousel -->
@@ -48,9 +61,10 @@
             <button class="btn neon-btn" onclick="copyToClipboard()">Copy Address</button>
             <p>
               <b>Explorer:</b>
-              <a href="https://etherscan.io/token/0xBDB5f01b2673790aEc2E077470BFFcc371a77126"
-                 target="_blank"
-                 class="link rainbow"
+              <a
+                href="https://etherscan.io/token/0xBDB5f01b2673790aEc2E077470BFFcc371a77126"
+                target="_blank"
+                class="link rainbow"
               >View on Etherscan</a>
             </p>
           </div>
@@ -65,7 +79,7 @@
               PepeDoge (PED) is an innovative meme coin that combines the legendary Pepe and Doge memes into one token on the Ethereum blockchain. The project aims to build an active community, develop a DeFi ecosystem, and launch various initiatives such as NFT collections, DAO governance, and exclusive Airdrop programs.
             </p>
             <p>
-              PepeDoge is more than just a meme—it’s a community-driven movement that believes in the power of decentralization and crypto culture. We are dedicated to creating a fun, secure, and rewarding ecosystem for every participant.
+              PepeDoge is more than just a meme—it’s a community-driven movement that believes in the power of decentralization and crypto culture. We are dedicated to creating a fun, secure, and rewarding ecosystem for every participant. PepeDoge is a community-driven project and is not affiliated with Matt Furie or the official Dogecoin project.
             </p>
           </div>
         </div>
@@ -90,7 +104,6 @@
             <p>🔹 <b>Ticker:</b> PED</p>
             <p>🔹 <b>Network:</b> Ethereum (ERC-20)</p>
             <p>🔹 <b>Total Supply:</b> 842,487,169 PED</p>
-
             <h2 class="neon-text" style="margin-top: 2rem;">Token Distribution</h2>
             <div style="max-width: 300px; margin: 0 auto;">
               <canvas id="tokenChart"></canvas>
@@ -146,12 +159,11 @@
             </p>
           </div>
         </div>
-
       </div>
     </section>
   </main>
 
-  <!-- Footer with Links -->
+  <!-- Footer with Legal Links -->
   <footer>
     <ul>
       <li><a href="Terms of Use.pdf" target="_blank">Terms of Use</a></li>
@@ -173,7 +185,7 @@
       });
     }
 
-    // Carousel functionality using header buttons for navigation
+    // Carousel functionality using header navigation buttons
     const slides = document.querySelectorAll('.carousel-item');
     let currentSlide = 0;
 
@@ -204,12 +216,12 @@
         datasets: [{
           data: [30, 10, 15, 20, 10, 15],
           backgroundColor: [
-            '#fbc531', // 30% Uniswap Liquidity
-            '#e74c3c', // 10% Team
-            '#3498db', // 15% Marketing & Growth
-            '#f1c40f', // 20% CEX Reserve
-            '#2ecc71', // 10% Airdrop
-            '#9b59b6'  // 15% Community Rewards
+            '#fbc531',
+            '#e74c3c',
+            '#3498db',
+            '#f1c40f',
+            '#2ecc71',
+            '#9b59b6'
           ]
         }]
       },
@@ -218,7 +230,7 @@
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            display: false // Using custom legend below the chart
+            display: false
           }
         }
       }
