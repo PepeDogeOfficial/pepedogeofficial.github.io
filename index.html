@@ -8,17 +8,24 @@
   <!-- Include Chart.js from a CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-  <!-- Header with Navigation Menu -->
+  <!-- Header with Navigation Menu (used for slide navigation) -->
   <header>
     <nav>
       <ul>
-        <!-- Ensure the slides line up with the intended indexes -->
+        <!-- Slide indexes:
+             0: Welcome
+             1: About PepeDoge
+             2: Project Goals
+             3: Tokenomics + Distribution
+             4: Team
+             5: Roadmap -->
         <li><a href="#" onclick="goToSlide(0)">Home</a></li>
         <li><a href="#" onclick="goToSlide(1)">About</a></li>
-        <li><a href="#" onclick="goToSlide(4)">Roadmap</a></li>
+        <li><a href="#" onclick="goToSlide(2)">Goals</a></li>
         <li><a href="#" onclick="goToSlide(3)">Tokenomics</a></li>
+        <li><a href="#" onclick="goToSlide(4)">Team</a></li>
+        <li><a href="#" onclick="goToSlide(5)">Roadmap</a></li>
       </ul>
     </nav>
   </header>
@@ -27,16 +34,11 @@
   <main>
     <section class="carousel-container">
       <div class="carousel">
-        
         <!-- Slide 0: Welcome -->
         <div class="carousel-item active">
           <div class="slide-content">
             <h1 class="neon-text">PEPEDOGE TOKEN</h1>
-            <img
-              src="PepeDogLogo.webp"
-              class="logo"
-              alt="PepeDoge Logo"
-            />
+            <img src="PepeDogLogo.webp" class="logo" alt="PepeDoge Logo" />
             <p class="lead">
               An innovative meme coin combining the legendary Pepe and Doge memes into one token on the Ethereum blockchain.
             </p>
@@ -46,10 +48,9 @@
             <button class="btn neon-btn" onclick="copyToClipboard()">Copy Address</button>
             <p>
               <b>Explorer:</b>
-              <a
-                href="https://etherscan.io/token/0xBDB5f01b2673790aEc2E077470BFFcc371a77126"
-                target="_blank"
-                class="link rainbow"
+              <a href="https://etherscan.io/token/0xBDB5f01b2673790aEc2E077470BFFcc371a77126"
+                 target="_blank"
+                 class="link rainbow"
               >View on Etherscan</a>
             </p>
           </div>
@@ -59,21 +60,12 @@
         <div class="carousel-item">
           <div class="slide-content">
             <h2 class="neon-text">About PepeDoge</h2>
-            <img
-              src="PepeDogLogo.webp"
-              class="logo"
-              alt="PepeDoge Logo"
-            />
+            <img src="PepeDogLogo.webp" class="logo" alt="PepeDoge Logo" />
             <p>
-              PepeDoge (PED) is an innovative meme coin that combines the legendary Pepe and Doge memes
-              into one token on the Ethereum blockchain. The project aims to build an active community,
-              develop a DeFi ecosystem, and launch various initiatives such as NFT collections,
-              DAO governance, and exclusive Airdrop programs.
+              PepeDoge (PED) is an innovative meme coin that combines the legendary Pepe and Doge memes into one token on the Ethereum blockchain. The project aims to build an active community, develop a DeFi ecosystem, and launch various initiatives such as NFT collections, DAO governance, and exclusive Airdrop programs.
             </p>
             <p>
-              PepeDoge is more than just a meme—it’s a community-driven movement that believes in
-              the power of decentralization and crypto culture. We are dedicated to creating a fun,
-              secure, and rewarding ecosystem for every participant.
+              PepeDoge is more than just a meme—it’s a community-driven movement that believes in the power of decentralization and crypto culture. We are dedicated to creating a fun, secure, and rewarding ecosystem for every participant.
             </p>
           </div>
         </div>
@@ -100,11 +92,9 @@
             <p>🔹 <b>Total Supply:</b> 842,487,169 PED</p>
 
             <h2 class="neon-text" style="margin-top: 2rem;">Token Distribution</h2>
-            <!-- Container to limit chart size -->
             <div style="max-width: 300px; margin: 0 auto;">
               <canvas id="tokenChart"></canvas>
             </div>
-            <!-- Custom legend -->
             <ul style="text-align:left; display:inline-block; margin-top:1rem;">
               <li><span style="color: #fbc531;">■</span> 30% Uniswap Liquidity</li>
               <li><span style="color: #e74c3c;">■</span> 10% Team</li>
@@ -116,7 +106,29 @@
           </div>
         </div>
 
-        <!-- Slide 4: Roadmap -->
+        <!-- Slide 4: Team -->
+        <div class="carousel-item">
+          <div class="slide-content">
+            <h2 class="neon-text">Team</h2>
+            <p>
+              PepeDoge is a fully community-driven project with no central leadership. The development, marketing, and expansion of the project are carried out by a decentralized group of contributors and enthusiasts who share a passion for memecoins and blockchain innovation.
+            </p>
+            <p>
+              🔹 <b>Decentralized Vision</b> – The project operates on a decentralized basis, with decisions influenced by community input and governance mechanisms.
+            </p>
+            <p>
+              🔹 <b>Transparency & Security</b> – While the team remains anonymous, all smart contract operations and tokenomics are fully transparent and verifiable on the blockchain.
+            </p>
+            <p>
+              🔹 <b>Community-Led Growth</b> – The success of PepeDoge relies on its community. Everyone who contributes to the project, whether through development, marketing, or engagement, is a part of the team.
+            </p>
+            <p>
+              PepeDoge is not controlled by any single entity or organization but thrives through the power of its supporters and believers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 5: Roadmap -->
         <div class="carousel-item">
           <div class="slide-content">
             <h2 class="neon-text">Roadmap – 2025</h2>
@@ -135,9 +147,6 @@
           </div>
         </div>
 
-        <!-- Carousel Navigation Buttons -->
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
       </div>
     </section>
   </main>
@@ -148,10 +157,11 @@
       <li><a href="Terms of Use.pdf" target="_blank">Terms of Use</a></li>
       <li><a href="Privacy Policy.pdf" target="_blank">Privacy Policy</a></li>
       <li><a href="Legal Disclaimer for PepeDoge (PED).pdf" target="_blank">Legal Disclaimer</a></li>
+      <li><a href="Whitepaper.pdf" target="_blank">Whitepaper</a></li>
     </ul>
   </footer>
 
-  <!-- JavaScript for Carousel Functionality and Copy-to-Clipboard -->
+  <!-- JavaScript for Navigation and Chart.js -->
   <script>
     // Function to copy the token address to clipboard
     function copyToClipboard() {
@@ -163,7 +173,7 @@
       });
     }
 
-    // Carousel functionality (auto switching turned off)
+    // Carousel functionality using header buttons for navigation
     const slides = document.querySelectorAll('.carousel-item');
     let currentSlide = 0;
 
@@ -172,17 +182,7 @@
       slides[index].classList.add('active');
     }
 
-    document.querySelector('.next').addEventListener('click', () => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlide(currentSlide);
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      updateSlide(currentSlide);
-    });
-
-    // Jump directly to a specific slide
+    // Jump directly to a specific slide via header navigation
     function goToSlide(index) {
       currentSlide = index;
       updateSlide(currentSlide);
@@ -218,7 +218,7 @@
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            display: false // We use a custom legend below the chart
+            display: false // Using custom legend below the chart
           }
         }
       }

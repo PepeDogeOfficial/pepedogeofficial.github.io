@@ -1,6 +1,6 @@
 /* 
   1) Ensure html and body occupy full height 
-  2) Box-sizing set to border-box 
+  2) Set box-sizing to border-box 
 */
 html,
 body {
@@ -11,8 +11,7 @@ body {
 }
 
 /* 
-  Use flexbox on the body to push the footer down 
-  by letting main content flex: 1 
+  Use flexbox on the body to push the footer to the bottom by allowing main content to flex: 1 
 */
 body {
   display: flex;
@@ -177,36 +176,6 @@ nav ul li a:hover {
   margin: 0.5rem 0;
   border-radius: 5px;
   text-align: left;
-}
-
-/* Target only the arrow buttons (.prev, .next) so they remain large and circular */
-.carousel > .prev,
-.carousel > .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  color: #e0e0e0;
-  padding: 0.8rem 1.2rem;
-  cursor: pointer;
-  font-size: 2rem;
-  border-radius: 50%;
-  transition: background 0.3s;
-  z-index: 10;
-}
-
-.carousel > .prev:hover,
-.carousel > .next:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.carousel > .prev {
-  left: 10px;
-}
-
-.carousel > .next {
-  right: 10px;
 }
 
 /* Footer */
